@@ -40,7 +40,7 @@ export class ProductosListaComponent implements OnInit {
     this.productoService.borrarProducto(productoABorrar.id);
   }
   getProductoLista(productoDetalle) {
-   this.router.navigate([productoDetalle.id, {relativeTo: this.route}]);
+   this.router.navigate([productoDetalle.id], {relativeTo: this.route});
   }
 
   addProduct() {

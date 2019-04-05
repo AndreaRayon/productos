@@ -10,7 +10,7 @@
        *ngFor="let pro of productos" 
        [producto]="pro"
        (borrarProducto) = "borrarProductoLista($event)"
-       (getProducto) = "getProductoLista($event)"
+       (detalleProducto) = "getProductoLista($event)"
        (addProducto)="addProductAux($event)"
        ></app-producto-item>
 </span>      
@@ -21,7 +21,7 @@
        *ngFor="let pro of cart" 
        [producto]="pro"
        (borrarProducto) = "borrarProductoLista($event)"
-       (getProducto) = "getProductoLista($event)"
+       (detalleProducto) = "getProductoLista($event)"
        ></app-producto-item>
 </span>
 
