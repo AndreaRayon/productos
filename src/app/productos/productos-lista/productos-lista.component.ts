@@ -38,6 +38,8 @@ export class ProductosListaComponent implements OnInit {
 
   borrarProductoLista(productoABorrar) {
     this.productoService.borrarProducto(productoABorrar.id);
+    this.total = 0;
+    this.productoService.productosCarrito.forEach(pro => this.total += pro.precio);
   }
   getProductoLista(productoDetalle) {
    this.router.navigate([productoDetalle.id], {relativeTo: this.route});

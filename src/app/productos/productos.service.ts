@@ -82,7 +82,31 @@ export class ProductosService {
   }
 ];
 
-  productosCarrito: Producto[] = [];
+  productosCarrito: Producto[] = [
+    {
+      id: 6,
+      nombre: 'IdeaPad',
+      marca: 'Lenovo',
+      categoria: 'laptop',
+      precio: 6999,
+      existencia: 10
+    },
+    {
+    id: 7,
+    nombre: 'Stream 14',
+    marca: 'hp',
+    categoria: 'laptop',
+    precio: 4500,
+    existencia: 16
+  },
+  {
+    id: 8,
+    nombre: 'Inspirion 15',
+    marca: 'Dell',
+    categoria: 'laptop',
+    precio: 17200,
+    existencia: 9
+  }];
   aux: Producto[] = [];
   constructor() {}
 
@@ -95,10 +119,10 @@ export class ProductosService {
     this.aux.length = 0;
   }
   addProductAux(producto: Producto) {
-    console.log(this.aux);
     const pos = this.aux.findIndex(pro => pro.id === producto.id);
     if (pos === -1) {
       this.aux.push(producto);
+      console.log(this.aux);
     } else {
       this.aux.splice(pos, 1);
     }
